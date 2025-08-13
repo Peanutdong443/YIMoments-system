@@ -1,0 +1,321 @@
+.checkup-page {
+    padding-top: 46px;
+    background: linear-gradient(to bottom, #f5f7fa 0%, #e4e8eb 100%) fixed;
+
+    min-height: calc(100vh - 46px); /* 减去顶部导航栏高度 */
+    padding-bottom: 0; /* 移除原有底部内边距 */
+}
+body, html {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #f5f7fa 0%, #e4e8eb 100%);
+}
+
+.profile-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+.info-card {
+    padding: 5px;
+    margin: 16px 0;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(112, 135, 233, 0.15);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(112, 135, 233, 0.2);
+}
+
+.list-header {
+    font-size: 16px;
+    background-color: white;
+}
+
+.selected-list {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+.selected-list:hover {
+    transform: translateY(-3px);
+}
+
+.custom-nav-bar_ {
+    --van-nav-bar-title-text-color: white;
+    --van-nav-bar-text-color: white;
+    --van-nav-bar-icon-color: white;
+    box-shadow: 0 2px 10px rgba(112, 135, 233, 0.3);
+}
+
+/* 单元格样式 */
+:deep(.left-align-value) {
+    text-align: center;
+    justify-content: flex-start;
+    flex: 1;
+    color: #666;
+}
+
+.calendar-container {
+    padding: 16px;
+}
+
+
+/* 票数标记样式 */
+:deep(.has-tickets) .van-calendar__bottom-info {
+    font-size: 10px;
+    line-height: 12px;
+    color: #07c160;
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+:deep(.no-tickets) .van-calendar__bottom-info {
+    font-size: 10px;
+    line-height: 12px;
+    position: absolute !important;
+    bottom: 2px;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+/* 禁用日期样式 */
+:deep(.van-calendar__day--disabled) {
+    color: #c8c9cc !important;
+    background-color: #fafafa !important;
+}
+
+/* 选中日期样式 */
+:deep(.van-calendar__day--selected) {
+    background-color: #1989fa;
+    color: white;
+}
+
+:deep(.van-calendar__day--selected.has-tickets .van-calendar__bottom-info) {
+    color: white;
+}
+
+/* 图标颜色 */
+:deep(.van-icon) {
+    color: #7087e9;
+    margin-right: 8px;
+}
+
+/* 卡片容器 */
+.expandable-card-container {
+    margin: 0;
+    padding: 0 16px 16px;
+}
+
+/* 卡片整体样式 */
+.custom-card {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(112, 135, 233, 0.15);
+    background-color: white;
+    border: 2px solid #CAD6FB; /* 新增外边框 */
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.custom-card:hover {
+    box-shadow: 0 6px 16px rgba(112, 135, 233, 0.25);
+    transform: translateY(-2px);
+}
+
+/* 卡片内容区域 */
+.card-content {
+    padding: 8px 0;
+    background: white;
+}
+
+.exam-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* 体检项目样式 */
+.exam-item {
+    background-color: #E8F0FF;
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin: 0 16px;
+    color: #333;
+    transition: all 0.2s ease;
+    border-left: 4px solid #7087e9;
+    box-shadow: 0 2px 4px rgba(112, 135, 233, 0.1);
+    width:90%;
+}
+
+.exam-item:hover {
+    background-color: #D6E4FF;
+    transform: translateX(4px);
+    box-shadow: 0 4px 8px rgba(112, 135, 233, 0.2);
+}
+
+.exam-item_ {
+    background-color: #f8f9ff;
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin: 0 16px;
+    color: #333;
+    transition: all 0.2s ease;
+    border-left: 4px solid #7087e9;
+    box-shadow: 0 2px 4px rgba(112, 135, 233, 0.1);
+    width:90%;
+}
+
+.exam-item_:hover {
+    background-color: #f0f4ff;
+    transform: translateX(4px);
+    box-shadow: 0 4px 8px rgba(112, 135, 233, 0.2);
+}
+
+/* 修改折叠面板箭头颜色 */
+:deep(.van-collapse-item__arrow) {
+    color: #7087e9 !important;
+}
+
+:deep(.van-collapse) {
+    background:  #7087e9; /* 浅蓝色背景 */
+    border-radius: 12px;
+}
+
+.list-title {
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.expandable-card-container {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+/* 卡片样式 - 采用边框方案 */
+.record-card {
+    margin: 12px 0;
+    border-radius: 10px;
+    overflow: hidden;
+    background: white;
+    border: 3px solid #d0dbf2; /* 明显的蓝色系边框 */
+    box-shadow: 0 2px 8px rgba(112, 135, 233, 0.1);
+    transition: all 0.3s ease;
+}
+
+.record-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(112, 135, 233, 0.2);
+    border-color: #a8c0e9; /* 悬停时边框加深 */
+}
+
+/* 卡片头部样式 */
+.card-header {
+    padding: 14px 16px;
+    background-color: #f8faff; /* 浅蓝色背景 */
+    border-bottom: 1px solid #e6ecf5;
+}
+
+.patient-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.patient-name {
+    margin: 0 8px;
+    font-weight: 500;
+    color: #333;
+    font-size: 15px;
+}
+
+.date-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.create-date {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    color: #666;
+}
+
+.create-date span {
+    margin-left: 4px;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.appointment-date {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    color: #07c160;
+    margin-top: 6px;
+}
+
+.appointment-date span {
+    margin-left: 4px;
+}
+
+/* 项目列表样式 */
+.exam-list {
+    padding: 8px 0;
+}
+
+
+.exam-index {
+    display: inline-block;
+    width: 20px;
+    color: #7087e9;
+    font-weight: bold;
+}
+
+.exam-name {
+    color: #333;
+}
+.exam-name_ {
+    color: #333;
+    opacity: 0.6;
+}
+
+/* 折叠面板自定义样式 */
+:deep(.van-collapse-item__content) {
+    padding: 0;
+    background-color: white;
+}
+
+:deep(.van-collapse-item__title) {
+    padding: 14px 16px;
+    background-color: #f5f8ff;
+    border-top: 1px solid #e6ecf5;
+}
+
+:deep(.van-collapse-item__title--expanded) {
+    background-color: #f0f4ff;
+}
+
+:deep(.card-title) {
+    color: #7087e9;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+:deep(.van-collapse-item__arrow) {
+    color: #7087e9 !important;
+    font-size: 16px;
+}
